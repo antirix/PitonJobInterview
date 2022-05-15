@@ -54,12 +54,12 @@ namespace Piton.API.Controllers
             var result = _activityService.GetAll();
             if (result.Success)
             {
-                return Ok(result.Data);
+                return Ok(result);
             }
-            return BadRequest(result.Message);
+            return BadRequest(result);
         }
-        [HttpPost("GelById")]
-        public IActionResult GelById(int id)
+        [HttpPost("GetById")]
+        public IActionResult GetById(int id)
         {
             var result = _activityService.GetById(id);
             if (result.Success)
@@ -121,7 +121,5 @@ namespace Piton.API.Controllers
             }
             return BadRequest(result);
         }
-
-
     }
 }

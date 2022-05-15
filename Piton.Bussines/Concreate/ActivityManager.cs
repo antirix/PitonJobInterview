@@ -73,7 +73,7 @@ namespace Piton.Business.Concreate
         {
             List<string> weeks = new() {"Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday", "Sunday" };
             var x = weeks.IndexOf(day);
-            return x+1;
+            return x;
         }
         public IDataResult<List<Activity>> GetWeeklyActivitys()
         {
